@@ -1,10 +1,14 @@
-import React, { useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import ThemeSwitcher from "../partials/ThemeSwitcher";
 import ThemeContext from "./../context/ThemeContext";
 
 const App = () => {
-  const { dark, toggleTheme } = useContext(ThemeContext);
+  const { dark } = useContext(ThemeContext);
   const appClassName = "app" + (dark ? " dark-mode" : "");
+
+  useEffect( () => {
+    console.log('re-redering!! !! !!')
+  });
 
   return (
     <div className={appClassName}>
