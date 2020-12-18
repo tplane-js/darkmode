@@ -17,7 +17,7 @@ export const ThemeProvider = (props) => {
     } else {
       setDark(false);
     }
-    // if state changes, repaints the app
+
   }, []);
 
   const toggleTheme = () => {

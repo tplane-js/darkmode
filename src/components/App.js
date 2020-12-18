@@ -7,7 +7,7 @@ const App = () => {
   const appClassName = "app" + (dark ? " dark-mode" : "");
 
   useEffect( () => {
-    console.log('re-redering!! !! !!')
+    //
   });
 
   return (
