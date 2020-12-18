@@ -5,9 +5,11 @@ import ThemeContext from "./../context/ThemeContext";
 const App = () => {
   const { dark } = useContext(ThemeContext);
   const appClassName = "app" + (dark ? " dark-mode" : "");
+  //debugger;
 
   useEffect( () => {
     //
+    console.log('rerender with dark:', dark)
   });
 
   return (

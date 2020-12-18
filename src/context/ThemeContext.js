@@ -6,20 +6,12 @@ const ThemeContext = createContext({
   toggleTheme: () => {},
 });
 
+
+const stringToBool = str => JSON.parse(str.toLowerCase());
+  
 export const ThemeProvider = (props) => {
-  const [dark, setDark] = useState(false);
-
-  useEffect(() => {
-    const isDarkTheme = window.localStorage.getItem("darkTheme");
-
-    if (isDarkTheme === "true") {
-      setDark(true);
-    } else {
-      setDark(false);
-    }
-
-  }, []);
-
+  const [dark, setDark] = useState(stringToBool(window.localStorage.getItem("darkTheme")));
+  
   const toggleTheme = () => {
     setDark(!dark);
     window.localStorage.setItem("darkTheme", !dark);
